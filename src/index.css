@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  [data-theme="midnight"] {
+    --bg-primary: #0a0f1d;
+    --bg-surface: #0f172a;
+    --bg-elevated: #162038;
+    --border-subtle: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-indigo: #6366f1;
+    --accent-indigo-light: #818cf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-amber: #f59e0b;
+  }
+
+  [data-theme="oled"] {
+    --bg-primary: #000000;
+    --bg-surface: #09090b;
+    --bg-elevated: #18181b;
+    --border-subtle: #27272a;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --accent-indigo: #a855f7;
+    --accent-indigo-light: #c084fc;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-amber: #f59e0b;
+  }
+
+  [data-theme="cyber"] {
+    --bg-primary: #060d1f;
+    --bg-surface: #0b1736;
+    --bg-elevated: #12224d;
+    --border-subtle: #1d4ed8;
+    --text-primary: #e0f2fe;
+    --text-secondary: #93c5fd;
+    --accent-indigo: #38bdf8;
+    --accent-indigo-light: #7dd3fc;
+    --accent-emerald: #06b6d4;
+    --accent-rose: #f43f5e;
+    --accent-amber: #fbbf24;
+  }
+
+  [data-theme="academic"] {
+    --bg-primary: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-elevated: #f1f5f9;
+    --border-subtle: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-indigo: #4f46e5;
+    --accent-indigo-light: #6366f1;
+    --accent-emerald: #059669;
+    --accent-rose: #e11d48;
+    --accent-amber: #d97706;
+  }
+
+  [data-theme="sepia"] {
+    --bg-primary: #151210;
+    --bg-surface: #221c18;
+    --bg-elevated: #2f2722;
+    --border-subtle: #3d332d;
+    --text-primary: #fef3c7;
+    --text-secondary: #d97706;
+    --accent-indigo: #f59e0b;
+    --accent-indigo-light: #fbbf24;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-amber: #f59e0b;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.01em;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Serif font for examiner questions and authoritative headings */
+  .font-serif-examiner {
+    font-family: 'Fraunces', Georgia, serif;
+    font-optical-sizing: auto;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Safe area insets for Android notches & navigation gestures */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.safe-area-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 8px);
+}
+
+/* Android touch tap target assurance */
+.touch-target {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Custom scrollbar matching sleek Android slate styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Thinking pulse animation */
+@keyframes thinkingPulse {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scaleX(0.7);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scaleX(1);
+  }
+}
+
+.thinking-pulse-line {
+  animation: thinkingPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Slow orbital rotation for geometric motifs */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Vivaguru - AI Oral Examiner",
+  "description": "Practice. Understand. Excel. An adaptive academic oral exam simulator testing genuine conceptual mastery through real-time Socratic interrogation, metacognitive calibration, and live speech audio analysis.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

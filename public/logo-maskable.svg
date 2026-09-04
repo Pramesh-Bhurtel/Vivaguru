@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGradMask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#0d1629"/>
+    </linearGradient>
+    <linearGradient id="leftWingM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="40%" stop-color="#9333ea"/>
+      <stop offset="100%" stop-color="#6b21a8"/>
+    </linearGradient>
+    <linearGradient id="rightWingM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="40%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="capGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="headGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333ea"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Solid full-bleed canvas for maskable container -->
+  <rect width="512" height="512" fill="url(#bgGradMask)"/>
+
+  <!-- Centered safe-zone group (scaled to 74% to guarantee 15%+ padding on all bounds) -->
+  <g transform="translate(66, 66) scale(0.74)">
+    <!-- Mortarboard Cap -->
+    <path d="M 256 92 L 340 128 L 256 164 L 172 128 Z" fill="url(#capGradM)" stroke="#60a5fa" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M 206 138 Q 256 178 306 138 C 306 156 292 174 256 174 C 220 174 206 156 206 138 Z" fill="#1e3a8a"/>
+    <circle cx="256" cy="128" r="4.5" fill="#93c5fd"/>
+    <path d="M 256 128 Q 320 138 328 162 L 328 196" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 324 196 L 332 196 L 330 208 L 326 208 Z" fill="#93c5fd"/>
+
+    <!-- Scholar Head -->
+    <circle cx="256" cy="202" r="28" fill="url(#headGradM)"/>
+
+    <!-- Left Arm of the V -->
+    <path d="M 256 364 L 166 186 C 182 186 202 188 226 190 L 256 304 Z" fill="url(#leftWingM)"/>
+    <path d="M 152 184 L 180 184 L 256 348 L 244 354 Z" fill="#a855f7" opacity="0.9"/>
+
+    <!-- Right Arm of the V -->
+    <path d="M 256 364 L 346 186 C 330 186 310 188 286 190 L 256 304 Z" fill="url(#rightWingM)"/>
+    <path d="M 360 184 L 332 184 L 256 348 L 268 354 Z" fill="#38bdf8" opacity="0.9"/>
+
+    <!-- Left Book Page -->
+    <path d="M 256 370 C 218 350 174 326 132 292 C 142 328 178 376 256 394 Z" fill="url(#leftWingM)"/>
+    <path d="M 256 394 C 200 380 160 348 122 316 C 130 332 152 368 256 406 Z" fill="#7c3aed" opacity="0.8"/>
+
+    <!-- Right Book Page -->
+    <path d="M 256 370 C 294 350 338 326 380 292 C 370 328 334 376 256 394 Z" fill="url(#rightWingM)"/>
+    <path d="M 256 394 C 312 380 352 348 390 316 C 382 332 360 368 256 406 Z" fill="#1d4ed8" opacity="0.8"/>
+  </g>
+</svg>
